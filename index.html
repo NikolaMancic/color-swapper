@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Color Swapper</title>
+    <link rel="stylesheet" href="color-swapper.css"/>
+</head>
+<body>
+    <canvas id="canvas" width="320" height="200"></canvas>
+
+    <div id="swapper">
+        <div id="output"></div>
+    </div>
+
+    <form>
+        <label for="oldColor">Replace: </label>
+        <input id="oldColor" type="text" disabled/>
+
+        <label for="newColor">With: </label>
+        <input id="newColor" type="text"/>
+
+        <br/><label for="redSlider">Red: </label>
+        <input type="range" min="0" max="255" step="1" value="128" id="redSlider" onchange="onSliderChange()"/>
+
+        <br/><label for="greenSlider">Green: </label>
+        <input type="range" min="0" max="255" step="1" value="128" id="greenSlider" onchange="onSliderChange()"/>
+
+        <br/><label for="blueSlider">Blue: </label>
+        <input type="range" min="0" max="255" step="1" value="128" id="blueSlider" onchange="onSliderChange()"/>
+
+        <br/><label for="alphaSlider">Alpha: </label>
+        <input type="range" min="0" max="255" step="1" value="255" id="alphaSlider" onchange="onSliderChange()"/>
+
+        <br/><input id="submit" type="submit" value="Replace"/>
+    </form>
+
+    <script src="color-swapper.js"></script>
+</body>
+</html>
